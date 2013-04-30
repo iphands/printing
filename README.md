@@ -1,4 +1,4 @@
 printing
 ========
 
-3d printing stuff
+3D models that I make, then print.
