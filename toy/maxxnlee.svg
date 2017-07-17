@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92+devel unknown"
+   sodipodi:docname="maxxnlee.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.0036511"
+     inkscape:cx="419.35263"
+     inkscape:cy="609.8652"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1055"
+     inkscape:window-x="0"
+     inkscape:window-y="1050"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4307"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion4309"><rect
+           id="rect4311"
+           width="448.89819"
+           height="159.81493"
+           x="-90.711334"
+           y="279.17703" /></flowRegion><flowPara
+         id="flowPara4313" /></flowRoot>    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.50547081px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 61.669922,136.34375 -18.869141,284.75977 68.986329,6.52734 3.19904,-135.10568 49.21643,36.15501 44.85283,-27.1523 11.10865,116.20649 64.25554,9.43981 17.31087,-59.37927 21.09148,0.95826 17.20707,39.96441 -74.74211,1.61373 6.72871,41.33079 63.57227,9.83203 -11.41315,30.59091 -60.66379,5.96215 -7.05098,197.61328 -113.54609,16.93603 22.37695,-217.50149 -79.057232,9.88968 -43.252474,267.58952 236.385286,-6.25553 219.99784,11.00664 192.09407,6.01001 -6.85115,-76.74027 -129.96146,23.36424 0.94336,-85.72265 119.52503,10.16805 -2.88379,-74.88422 -123.63538,27.96617 1.58203,-69.57813 134.50036,9.23296 c -0.69271,-16.70052 -5.57024,-70.77768 -3.42192,-69.83365 l -183.58234,10.96983 -2.18126,203.51737 -182.00571,31.25459 3.48579,-74.56297 117.57478,11.6995 -6.45852,-80.87703 -112.88383,15.51542 6.33789,-61.0625 137.1524,15.2751 8.96541,-70.87648 -58.57219,6.46095 -15.73774,-23.90154 34.89211,-3.47399 12.02604,-57.96926 -55.59974,6.10014 1.1816,-42.08923 24.67725,1.65953 23.83815,46.52825 13.4431,25.1319 51.9278,-3.18163 15.62494,-52.35548 26.61284,48.71263 71.09405,0.29845 -65.91588,-122.35092 17.49219,-41.87695 74.46421,100.39001 -45.36663,56.76015 82.09831,73.55943 -1.93222,-79.44397 28.48286,41.765 53.52513,-27.25382 -57.51971,-64.66548 64.19915,-170.19246 -47.06047,-20.65324 -51.81641,131.70313 -70.62305,-122.37696 -27.71093,-7.58203 -56.41602,90.93164 -45.10321,-75.98422 -42.82641,25.35181 64.04681,99.39022 -16.72461,44.29493 -77.73633,-184.50391 -34.60099,0.81779 -79.00161,152.16642 -22.8017,-186.90218 -85.38314,108.651 z m 319.652438,119.74429 12.01468,47.85948 -40.32544,2.03452 5.07955,-48.28569 z"
+       id="path4385"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+       transform="scale(0.26458333)" />
+  </g>
+</svg>
