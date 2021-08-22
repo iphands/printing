@@ -1,2 +1,4 @@
 *blend[0-9]*
-not_mine/
+/not_mine
+/settings/PrusaSlicer/cache
+/settings/PrusaSlicer/snapshots
