@@ -1,0 +1,20 @@
+#!/bin/bash
+set -e
+
+GIT_DIR="${HOME}/printing/models/settings"
+CONF_DIR="${HOME}/.var/app/com.prusa3d.PrusaSlicer/config"
+
+_usage() {
+  echo "Usage: $0 pull|push"
+  exit 1
+}
+
+_sync() {
+  cd "$1"
+  rsync -avPS "${2}/PrusaSlicer" .
+  exit 0
+}
+
+[[ "$1" == "" ]]     && _usage
+[[ "$1" == "pull" ]] && _sync "$GIT_DIR" "$CONF_DIR"
+[[ "$1" == "push" ]] && _sync "$CONF_DIR" "$GIT_DIR"
