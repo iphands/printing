@@ -36,3 +36,20 @@ Recv: FIRMWARE_NAME:Marlin V1; Sprinter/grbl mashup for gen6 FIRMWARE_URL:http:/
 Recv: ok
 Send: M21
 Recv: echo:SD init fail
+
+
+
+Send: M503
+Recv: echo:Steps per unit:
+Recv: echo:  M92 X44.44 Y44.44 Z200.00 E235.75
+Recv: echo:Maximum feedrates (mm/s):
+Recv: echo:  M203 X500.00 Y500.00 Z250.00 E200000.00
+Recv: echo:Maximum Acceleration (mm/s2):
+Recv: echo:  M201 X9000 Y9000 Z30 E10000
+Recv: echo:Acceleration: S=acceleration, T=retract acceleration
+Recv: echo:  M204 S3000.00 T3000.00
+Recv: echo:Advanced variables: S=Min feedrate (mm/s), T=Min travel feedrate (mm/s), B=minimum segment time (ms), X=maximum xY jerk (mm/s),  Z=maximum Z jerk (mm/s)
+Recv: echo:  M205 S0.00 T0.00 B20000 X15.00 Z0.40 E5.00
+Recv: echo:PID settings:
+Recv: echo:   M301 P7.00 I0.10 D12.00
+Recv: ok
