@@ -1,0 +1,38 @@
+Connection closed, closing down monitor
+Changing monitoring state from "Operational" to "Offline"
+Changing monitoring state from "Offline" to "Opening serial connection"
+Connecting to port /dev/ttyACM0, baudrate 115200
+Changing monitoring state from "Opening serial connection" to "Connecting"
+Connected to: Serial<id=0x7feb38174e20, open=True>(port='/dev/ttyACM0', baudrate=115200, bytesize=8, parity='N', stopbits=1, timeout=10.0, xonxoff=False, rtscts=False, dsrdtr=False), starting monitor
+Send: N0 M110 N0*125
+Recv: start
+Send: N0 M110 N0*125
+Recv: echo: External Reset
+Recv: Marlin: 1.0.0 RC2
+Recv: echo: Last Updated: 2012-05-30 | Author: johnny
+Recv: echo: Free Memory: 4775  PlannerBufferBytes: 1232
+Recv: echo:Using Default settings:
+Recv: echo:Steps per unit:
+Recv: echo:  M92 X44.44 Y44.44 Z200.00 E235.75
+Recv: echo:Maximum feedrates (mm/s):
+Recv: echo:  M203 X500.00 Y500.00 Z250.00 E200000.00
+Recv: echo:Maximum Acceleration (mm/s2):
+Recv: echo:  M201 X9000 Y9000 Z30 E10000
+Recv: echo:Acceleration: S=acceleration, T=retract acceleration
+Recv: echo:  M204 S3000.00 T3000.00
+Recv: echo:Advanced variables: S=Min feedrate (mm/s), T=Min travel feedrate (mm/s), B=minimum segment time (ms), X=maximum xY jerk (mm/s),  Z=maximum Z jerk (mm/s)
+Recv: echo:  M205 S0.00 T0.00 B20000 X15.00 Z0.40 E5.00
+Recv: echo:PID settings:
+Recv: echo:   M301 P7.00 I0.10 D12.00
+Recv: echo:SD init fail
+Recv: ok
+Send: N0 M110 N0*125
+Changing monitoring state from "Connecting" to "Operational"
+Recv: ok
+Send: N0 M110 N0*125
+Recv: ok
+Send: N1 M115*39
+Recv: FIRMWARE_NAME:Marlin V1; Sprinter/grbl mashup for gen6 FIRMWARE_URL:http://www.mendel-parts.com PROTOCOL_VERSION:1.0 MACHINE_TYPE:Mendel EXTRUDER_COUNT:1
+Recv: ok
+Send: M21
+Recv: echo:SD init fail
