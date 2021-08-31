@@ -609,7 +609,6 @@
 
 // Makergear
 #define PID_INTEGRAL_DRIVE_MAX 255  //limit for the integral term
-#define PID_K1 0.95 //smoothing factor withing the PID
 // #define PID_dT ((16.0 * 8.0)/(F_CPU / 64.0 / 256.0)) //sampling period of the
 // #define DEFAULT_Kp 7.000
 // #define DEFAULT_Ki 0.100
