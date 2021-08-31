@@ -611,9 +611,27 @@
 #define PID_INTEGRAL_DRIVE_MAX 255  //limit for the integral term
 #define PID_K1 0.95 //smoothing factor withing the PID
 // #define PID_dT ((16.0 * 8.0)/(F_CPU / 64.0 / 256.0)) //sampling period of the
-#define DEFAULT_Kp 7.000
-#define DEFAULT_Ki 0.100
-#define DEFAULT_Kd 12.00
+// #define DEFAULT_Kp 7.000
+// #define DEFAULT_Ki 0.100
+// #define DEFAULT_Kd 12.00
+
+// AUTOTUNED
+// Send: M303 E0 C8 S180
+// Recv: PID Autotune start
+// Recv:  Kp: 12.43 Ki: 0.58 Kd: 66.70
+// Recv:  Kp: 12.47 Ki: 0.59 Kd: 65.86
+// Recv:  Kp: 12.73 Ki: 0.60 Kd: 67.01
+// Recv:  Kp: 13.19 Ki: 0.63 Kd: 69.15
+// Recv:  Kp: 12.40 Ki: 0.58 Kd: 66.82
+// Recv:  Kp: 12.76 Ki: 0.60 Kd: 67.43
+// Recv: PID Autotune finished! Put the last Kp, Ki and Kd constants from below into Configuration.h
+// Recv: #define DEFAULT_Kp 12.76
+// Recv: #define DEFAULT_Ki 0.60
+// Recv: #define DEFAULT_Kd 67.43
+
+#define DEFAULT_Kp 12.76
+#define DEFAULT_Ki 0.60
+#define DEFAULT_Kd 67.43
 
 //===========================================================================
 //====================== PID > Bed Temperature Control ======================
@@ -1745,7 +1763,7 @@
 #endif
 
 // Homing speeds (mm/min)
-#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (4*60) }
+#define HOMING_FEEDRATE_MM_M { (50*75), (50*75), (4*80) }
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
@@ -1857,13 +1875,13 @@
 //
 #define PREHEAT_1_LABEL       "PLA"
 #define PREHEAT_1_TEMP_HOTEND 180
-#define PREHEAT_1_TEMP_BED     70
+#define PREHEAT_1_TEMP_BED     40
 #define PREHEAT_1_TEMP_CHAMBER 35
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "ABS"
-#define PREHEAT_2_TEMP_HOTEND 240
-#define PREHEAT_2_TEMP_BED    110
+#define PREHEAT_2_TEMP_HOTEND 220
+#define PREHEAT_2_TEMP_BED    40
 #define PREHEAT_2_TEMP_CHAMBER 35
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
