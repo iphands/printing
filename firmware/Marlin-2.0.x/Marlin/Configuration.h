@@ -1200,7 +1200,8 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 33, -11, -4.10 }
+// #define NOZZLE_TO_PROBE_OFFSET { 33, -11, -4.10 } // old fanmount part
+# define NOZZLE_TO_PROBE_OFFSET { 33.6, -8.80, -3.30 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
