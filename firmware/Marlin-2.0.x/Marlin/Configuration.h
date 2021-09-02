@@ -1205,7 +1205,7 @@
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 15
+#define PROBING_MARGIN 12
 
 // X and Y axis travel speed (mm/min) between probes
 // #define XY_PROBE_FEEDRATE (133*60)
@@ -1215,7 +1215,7 @@
 #define Z_PROBE_FEEDRATE_FAST (4*70)
 
 // Feedrate (mm/min) for the "accurate" probe of each point
-#define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 2)
+#define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 3)
 
 /**
  * Probe Activation Switch
@@ -1253,8 +1253,8 @@
  * A total of 2 does fast/slow probes with a weighted average.
  * A total of 3 or more adds more slow probes, taking the average.
  */
-//#define MULTIPLE_PROBING 2
-//#define EXTRA_PROBING    1
+#define MULTIPLE_PROBING 4
+#define EXTRA_PROBING    1
 
 /**
  * Z probes require clearance when deploying, stowing, and moving between
@@ -1393,14 +1393,14 @@
 
 // The size of the printable area
 #define X_BED_SIZE 205
-#define Y_BED_SIZE 240
+#define Y_BED_SIZE 245
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
 #define X_MAX_POS (X_BED_SIZE + 5)
-#define Y_MAX_POS (Y_BED_SIZE + 5)
+#define Y_MAX_POS (Y_BED_SIZE)
 #define Z_MAX_POS 200
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
@@ -1628,8 +1628,8 @@
   // Set the number of grid points per dimension.
   // #define GRID_MAX_POINTS_X 5
   // #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
-  #define GRID_MAX_POINTS_X 8
-  #define GRID_MAX_POINTS_Y 10
+  #define GRID_MAX_POINTS_X 12
+  #define GRID_MAX_POINTS_Y 12
 
   // Probe along the Y axis, advancing X after each column
   //#define PROBE_Y_FIRST
