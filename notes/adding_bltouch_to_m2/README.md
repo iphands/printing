@@ -1,4 +1,4 @@
-# Adding bltouch to an original Makergear M2 (12v and RAMBo 1.0d)
+# Adding bltouch to an original Makergear M2 (19v and RAMBo 1.0d)
 
 I started up my printer again after about two years of downtime and decided
 that it was time for an upgrade. Oh boy what an upgrade it was!!
