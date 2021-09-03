@@ -1254,8 +1254,8 @@
  * A total of 2 does fast/slow probes with a weighted average.
  * A total of 3 or more adds more slow probes, taking the average.
  */
-#define MULTIPLE_PROBING 2
-// #define EXTRA_PROBING    1
+#define MULTIPLE_PROBING 4
+#define EXTRA_PROBING    1
 
 /**
  * Z probes require clearance when deploying, stowing, and moving between
@@ -1631,8 +1631,8 @@
   // #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
   
   // Ultra Fast probe
-  #define GRID_MAX_POINTS_X 3
-  #define GRID_MAX_POINTS_Y 4
+  // #define GRID_MAX_POINTS_X 3
+  // #define GRID_MAX_POINTS_Y 4
   // #define MULTIPLE_PROBING  2 
 
   // Fast probe
@@ -1642,8 +1642,8 @@
   // #define EXTRA_PROBING  0
 
   // Super probe!
-  // #define GRID_MAX_POINTS_X 12
-  // #define GRID_MAX_POINTS_Y 12
+  #define GRID_MAX_POINTS_X 11
+  #define GRID_MAX_POINTS_Y 13
   // #define MULTIPLE_PROBING   4 // copy to multi probing area
   // #define EXTRA_PROBING      1
   
