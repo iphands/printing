@@ -800,7 +800,7 @@
 //#define USE_KMIN_PLUG
 //#define USE_XMAX_PLUG
 //#define USE_YMAX_PLUG
-//#define USE_ZMAX_PLUG
+#define USE_ZMAX_PLUG
 //#define USE_IMAX_PLUG
 //#define USE_JMAX_PLUG
 //#define USE_KMAX_PLUG
@@ -854,7 +854,7 @@
 #define K_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define X_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Y_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Z_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+#define Z_MAX_ENDSTOP_INVERTING true  // Set to true to invert the logic of the endstop.
 #define I_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define J_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define K_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
@@ -1200,12 +1200,13 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-// #define NOZZLE_TO_PROBE_OFFSET { 33, -11, -4.10 } // old fanmount part
-# define NOZZLE_TO_PROBE_OFFSET { 33.6, -8.80, -3.30 }
+// #define NOZZLE_TO_PROBE_OFFSET { 33.00, -11.99, -04.10 }      // old fanmount part
+// # define NOZZLE_TO_PROBE_OFFSET { 33.6, -08.80, -03.30 } // new fanmount
+# define NOZZLE_TO_PROBE_OFFSET { 34.90, -10.00, -02.30 }  // new filament drive and extruder motor housing
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 12
+#define PROBING_MARGIN 15
 
 // X and Y axis travel speed (mm/min) between probes
 // #define XY_PROBE_FEEDRATE (133*60)
@@ -1253,8 +1254,8 @@
  * A total of 2 does fast/slow probes with a weighted average.
  * A total of 3 or more adds more slow probes, taking the average.
  */
-#define MULTIPLE_PROBING 4
-#define EXTRA_PROBING    1
+#define MULTIPLE_PROBING 2
+// #define EXTRA_PROBING    1
 
 /**
  * Z probes require clearance when deploying, stowing, and moving between
@@ -1628,9 +1629,24 @@
   // Set the number of grid points per dimension.
   // #define GRID_MAX_POINTS_X 5
   // #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
-  #define GRID_MAX_POINTS_X 12
-  #define GRID_MAX_POINTS_Y 12
+  
+  // Ultra Fast probe
+  #define GRID_MAX_POINTS_X 3
+  #define GRID_MAX_POINTS_Y 4
+  // #define MULTIPLE_PROBING  2 
 
+  // Fast probe
+  // #define GRID_MAX_POINTS_X 5
+  // #define GRID_MAX_POINTS_Y 5
+  // #define MULTIPLE_PROBING  2 // copy to multi probing area
+  // #define EXTRA_PROBING  0
+
+  // Super probe!
+  // #define GRID_MAX_POINTS_X 12
+  // #define GRID_MAX_POINTS_Y 12
+  // #define MULTIPLE_PROBING   4 // copy to multi probing area
+  // #define EXTRA_PROBING      1
+  
   // Probe along the Y axis, advancing X after each column
   //#define PROBE_Y_FIRST
 
