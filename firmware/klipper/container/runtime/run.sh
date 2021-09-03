@@ -1,7 +1,6 @@
 #!/bin/bash
 
 docker run --name klipper-server \
-  --rm \
   -v /main/docker/klipper/tmp:/tmp:rw \
   -v /main/docker/klipper/config:/home/klippy/.config \
   -v /main/docker/klipper/runner.sh:/runner.sh:ro \
