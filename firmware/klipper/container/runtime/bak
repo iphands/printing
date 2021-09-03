@@ -1,0 +1,67 @@
+FROM ubuntu:18.04
+
+RUN apt-get update && \
+    apt-get install -y sudo \
+    virtualenv python-dev libffi-dev build-essential \
+    libncurses-dev \
+    libusb-dev \
+    avrdude gcc-avr binutils-avr avr-libc \
+    stm32flash libnewlib-arm-none-eabi \
+    gcc-arm-none-eabi binutils-arm-none-eabi libusb-1.0
+
+# Create user
+RUN useradd -ms /bin/bash klippy && adduser klippy dialout
+USER klippy
+
+#This fixes issues with the volume command setting wrong permissions
+RUN mkdir /home/klippy/.config
+VOLUME /home/klippy/.config
+
+### Klipper setup ###
+WORKDIR /home/klippy
+
+COPY . klipper/
+USER root
+RUN echo 'klippy ALL=(ALL:ALL) NOPASSWD: ALL' > /etc/sudoers.d/klippy && \
+    chown klippy:klippy -R klipper
+
+# This is to allow the install script to run without error
+RUN ln -s /bin/true /bin/systemctl
+
+# Install octoprint
+RUN apt install -y curl
+RUN curl -fsSLO --compressed --retry 3 --retry-delay 1 \
+    https://github.com/OctoPrint/OctoPrint/archive/refs/tags/1.6.1.tar.gz && \
+    mkdir -p /opt/octoprint && \
+    tar xzf 1.6.1.tar.gz --strip-components 1 -C /opt/octoprint --no-same-owner
+
+RUN apt install -y python-pip
+
+WORKDIR /opt/octoprint
+RUN pip install .
+RUN mkdir -p /octoprint/octoprint /octoprint/plugins
+
+# Install mjpg-streamer
+RUN curl -fsSLO --compressed --retry 3 --retry-delay 10 \
+  https://github.com/jacksonliam/mjpg-streamer/archive/master.tar.gz \
+  && mkdir /mjpg \
+  && tar xzf master.tar.gz -C /mjpg
+
+WORKDIR /mjpg/mjpg-streamer-master/mjpg-streamer-experimental
+RUN make
+RUN make install
+
+ENV CAMERA_DEV /dev/video0
+ENV MJPG_STREAMER_INPUT -n -r 640x480
+ENV PIP_USER true
+ENV PYTHONUSERBASE /octoprint/plugins
+ENV PATH "${PYTHONUSERBASE}/bin:${PATH}"
+RUN cd /octoprint && /init &
+
+USER klippy
+RUN ./klipper/scripts/install-ubuntu-18.04.sh
+
+# Clean up install script workaround
+RUN sudo rm -f /bin/systemctl
+
+CMD ["/home/klippy/klippy-env/bin/python", "/home/klippy/klipper/klippy/klippy.py", "/home/klippy/.config/printer.cfg"]
