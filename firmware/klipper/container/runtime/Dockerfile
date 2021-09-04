@@ -9,6 +9,8 @@ RUN apt-get update && \
     stm32flash libnewlib-arm-none-eabi \
     gcc-arm-none-eabi binutils-arm-none-eabi libusb-1.0
 
+RUN apt-get install -y socat
+
 # Create user
 RUN useradd -ms /bin/bash klippy && adduser klippy dialout
 USER klippy
@@ -20,18 +22,17 @@ VOLUME /home/klippy/.config
 ### Klipper setup ###
 WORKDIR /home/klippy
 
-COPY . klipper/
+# COPY . klipper/
 USER root
-RUN echo 'klippy ALL=(ALL:ALL) NOPASSWD: ALL' > /etc/sudoers.d/klippy && \
-    chown klippy:klippy -R klipper
+RUN echo 'klippy ALL=(ALL:ALL) NOPASSWD: ALL' > /etc/sudoers.d/klippy
 
 # This is to allow the install script to run without error
 RUN ln -s /bin/true /bin/systemctl
 
-RUN apt-get install -y socat
-
 USER klippy
-RUN ./klipper/scripts/install-ubuntu-18.04.sh
+COPY ./scripts/install-ubuntu-18.04.sh /home/klippy/install-ubuntu-18.04.sh
+COPY ./scripts/klippy-requirements.txt /home/klippy/klippy-requirements.txt
+RUN  /home/klippy/install-ubuntu-18.04.sh
 
 # Clean up install script workaround
 RUN sudo rm -f /bin/systemctl
