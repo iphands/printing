@@ -6,7 +6,7 @@ G1 F120 Z0 ; move to Z0
 M211 S0    ; turn off soft endstop
 
 ;; calibrate
-M110       ; get current pos -3.30
+M114       ; get current pos -3.30
 
 ;; X:66.40 Y:108.80 Z:-3.30 //note
 ;; 33.6 -8.80 -3.30 //final

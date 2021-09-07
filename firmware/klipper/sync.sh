@@ -3,7 +3,7 @@ set -e
 
 KLIPPER_GIT=/home/iphands/prog/klipper/
 PRINTING_GIT=/home/iphands/printing/models
-SERVER=nas.lan
+SERVER=noir.lan
 
 rsync -avPS ${PRINTING_GIT}/firmware/klipper/container/runtime/* root@${SERVER}:/main/docker/klipper/
 rsync -avPS "$KLIPPER_GIT" root@${SERVER}:/main/docker/klipper/git/
