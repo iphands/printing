@@ -1,0 +1,14 @@
+#!/bin/bash
+
+DELAY=1.500
+
+modprobe -r cdc_acm
+sleep "$DELAY"
+
+rm -f /dev/ttyACM0
+sleep "$DELAY"
+
+modprobe cdc_acm
+sleep "$DELAY"
+
+socat -d -d tcp-l:8888,fork,keepalive,nodelay,reuseaddr /dev/ttyACM0,nonblock,b115200,raw,echo=0

@@ -1,0 +1,14 @@
+[Unit]
+Description=Makergear M2 printer forwarder
+After=network.target
+
+[Service]
+ExecStart=/usr/local/sbin/forward_makergear
+WorkingDirectory=/tmp
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
