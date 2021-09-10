@@ -3,7 +3,7 @@ Description=Makergear M2 printer forwarder
 After=network.target
 
 [Service]
-ExecStart=socat -d -d tcp-l:8888,fork,keepalive,nodelay,reuseaddr /dev/ttyACM0,nonblock,b115200,raw,echo=0
+ExecStart=/usr/local/sbin/forward_makergear
 WorkingDirectory=/tmp
 StandardOutput=inherit
 StandardError=inherit
