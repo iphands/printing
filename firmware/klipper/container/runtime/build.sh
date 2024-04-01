@@ -8,7 +8,7 @@ KLIPPER_SRC=/main/docker/klipper/git
 # KLIPPER_SRC=/home/iphands/prog/klipper
 
 cp scripts/install-ubuntu-18.04.sh git/scripts/
-cp scripts/install_moonraker.sh git/scripts/
+# cp scripts/install_moonraker.sh git/scripts/
 
 cd "$KLIPPER_SRC"
-docker build --rm -f "$DOCKERFILE" . -t klipper-server
+docker build --rm -f "$DOCKERFILE" . -t klipper

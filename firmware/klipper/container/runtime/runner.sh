@@ -32,14 +32,24 @@ _run_klipper() {
   done
 }
 
+_fix_uds() {
+  while true
+  do
+    sudo chmod 777 /tmp/klippy_uds || true
+    sleep 0.250
+  done
+}
+
 _run_moonraker() {
   sudo touch /tmp/moonraker.log
   sudo chown klippy:klippy /tmp/moonraker.log
   sudo chown klippy:klippy -R .
 }
 
-_connect_to_remote_printer &
-sudo rm /tmp/printer || true
+# _connect_to_remote_printer &
+# sudo rm /tmp/printer || true
 _run_klipper &
-_run_moonraker &
-_forward_fake_printer
+_fix_uds
+# chmod 777 /tmp/klippy_uds
+# _run_moonraker &
+# _forward_fake_printer

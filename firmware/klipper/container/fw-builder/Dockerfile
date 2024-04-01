@@ -1,4 +1,4 @@
-FROM fedora
+FROM fedora:36
 RUN  dnf update -y
 RUN  dnf install -y \
     ncurses-devel \

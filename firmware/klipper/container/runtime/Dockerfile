@@ -1,7 +1,7 @@
 #    FROM ubuntu:18.04
 FROM ubuntu:21.04
 
-RUN echo 'Acquire::http { Proxy "http://noir.lan:3142"; }' > /etc/apt/apt.conf.d/proxy
+# RUN echo 'Acquire::http { Proxy "http://noir.lan:3142"; }' > /etc/apt/apt.conf.d/proxy
 
 
 RUN DEBIAN_FRONTEND="noninteractive" apt-get update && \
@@ -40,12 +40,12 @@ RUN  /home/klippy/install-ubuntu-18.04.sh
 # Clean up install script workaround
 RUN sudo rm -f /bin/systemctl
 
-RUN  sudo apt install -y wget unzip
-RUN  mkdir moonraker && cd moonraker && \
-    wget https://github.com/Arksine/moonraker/releases/download/v0.7.1/moonraker.zip && \
-    unzip moonraker.zip && rm moonraker.zip
+# RUN  sudo apt install -y wget unzip
+# RUN  mkdir moonraker && cd moonraker && \
+#     wget https://github.com/Arksine/moonraker/releases/download/v0.7.1/moonraker.zip && \
+#     unzip moonraker.zip && rm moonraker.zip
 
-COPY ./scripts/install_moonraker.sh /home/klippy/
-RUN  bash /home/klippy/install_moonraker.sh
+# COPY ./scripts/install_moonraker.sh /home/klippy/
+# RUN  bash /home/klippy/install_moonraker.sh
 
 CMD  [ "bash", "/runner.sh" ]
