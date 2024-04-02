@@ -4,3 +4,7 @@
 /settings/PrusaSlicer/snapshots
 /notes/adding_bltouch_to_m2/pics/orig
 /firmware/octoprint/data
+/firmware/klipper/configs/KAMP/
+/firmware/klipper/slicer-configs/cache/
+/firmware/klipper/slicer-configs/snapshots/
+/firmware/klipper/slicer-configs/vendor/
