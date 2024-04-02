@@ -7,7 +7,7 @@ SERVER=noir.lan
 
 rsync -avPS ${PRINTING_GIT}/firmware/klipper/container/runtime/* root@${SERVER}:/main/docker/klipper/
 rsync -avPS "$KLIPPER_GIT" root@${SERVER}:/main/docker/klipper/git/
-rsync -avPS "${PRINTING_GIT}/firmware/klipper/printer.cfg" root@${SERVER}:/main/docker/klipper/config/printer.cfg
+rsync -avPS "${PRINTING_GIT}/firmware/klipper/config/*.cfg" root@${SERVER}:/main/docker/klipper/config/
 
 # time docker save klipper-server | zstd -1 - > klipper.tar.zst
 # rsync -avPS ./klipper.tar.zst root@${SERVER}:/main/docker/klipper/
