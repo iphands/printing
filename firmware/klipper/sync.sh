@@ -5,9 +5,10 @@ KLIPPER_GIT=/home/iphands/prog/klipper/
 PRINTING_GIT=/home/iphands/printing/models
 SERVER=noir.lan
 
+rsync -avPS ~/printing/kamp/Configuration/*cfg "${PRINTING_GIT}/firmware/klipper/configs/KAMP/"
 rsync -avPS ${PRINTING_GIT}/firmware/klipper/container/runtime/* root@${SERVER}:/main/docker/klipper/
 rsync -avPS "$KLIPPER_GIT" root@${SERVER}:/main/docker/klipper/git/
-rsync -avPS "${PRINTING_GIT}/firmware/klipper/config/*.cfg" root@${SERVER}:/main/docker/klipper/config/
+rsync -avPS "${PRINTING_GIT}/firmware/klipper/configs/" root@${SERVER}:/main/docker/klipper/config/
 
 # time docker save klipper-server | zstd -1 - > klipper.tar.zst
 # rsync -avPS ./klipper.tar.zst root@${SERVER}:/main/docker/klipper/
